@@ -1,11 +1,19 @@
 ---
-title: "nikhilshah7.github.io"
+title: "Nikhil Shah"
+image: media/Arch.png
+toc: false
+about: 
+  template: trestles
+  image-shape: rectangle
+  links:
+#  - text: LinkedIn
+#    href: https://www.linkedin.com/in/samanthacsik/
+  - text: GitHub
+    href: https://github.com/nikhilshah7
+  - text: Email
+    href: mailto::nikhil28shah@gmail.com
+  - text: Site Repo
+    href: https://github.com/nikhilshah7/nikhilshah7.github.io
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
-
-```{r}
-1 + 1
-```
+This website currently contains two data visualization exercises.

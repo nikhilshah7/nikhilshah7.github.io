@@ -1,20 +1,31 @@
+# change project directory: 
+# cd "/Users/nikhilshah/Desktop/R Files/R Working Directory/nikhilshah7.github.io"
+
 project:
   type: website
   output-dir: docs
 
 website:
-  title: "nikhilshah7.github.io"
+  title: "Nikhil Shah"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - text: Data Viz
+        menu:
+        - text: TBD
+          href: tuesday1.qmd
+        - text: TBD 2
+          href: tuesday2.qmd
 
 format:
   html:
-    theme: cosmo
+    theme: 
+      light: pulse
+      dark: solar
     css: styles.css
     toc: true
+    page-layout: full
 
 editor: visual
 
