@@ -201,7 +201,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>This analysis uses data from the <a href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2024/2024-10-01">October 1, 2024 TidyTuesday</a>.</p>
-<p>This is a dataset of 20,058 online chess games. The data was collected and cleaned from Lichess.org by <a href="https://www.kaggle.com/datasets/datasnaek/chess/data">Kaggle/Mitchell J.</a></p>
+<p>This is a dataset of 20,058 online chess games. The data was collected and cleaned from Lichess.org by <a href="https://www.kaggle.com/datasets/datasnaek/chess/data">Kaggle/Mitchell J.</a> It includes extensive data on each game including each move used, both players’ usernames and ratings, and the time of the game.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># adds a column that isolates the opening move of each game, and orders it by how common each move is</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>chess <span class="ot">&lt;-</span> chess <span class="sc">|&gt;</span></span>
