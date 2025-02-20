@@ -9,7 +9,7 @@ format: html
 
 This analysis uses data from the [October 1, 2024 TidyTuesday](https://github.com/rfordatascience/tidytuesday/tree/main/data/2024/2024-10-01).
 
-This is a dataset of 20,058 online chess games. The data was collected and cleaned from Lichess.org by [Kaggle/Mitchell J.](https://www.kaggle.com/datasets/datasnaek/chess/data)
+This is a dataset of 20,058 online chess games. The data was collected and cleaned from Lichess.org by [Kaggle/Mitchell J.](https://www.kaggle.com/datasets/datasnaek/chess/data) It includes extensive data on each game including each move used, both players' usernames and ratings, and the time of the game.
 
 ```{r}
 #| label: Data Import
