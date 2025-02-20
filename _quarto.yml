@@ -15,7 +15,7 @@ website:
         menu:
         - text: Lichess.org
           href: tuesday1.qmd
-        - text: TBD 2
+        - text: National Park Species
           href: tuesday2.qmd
 
 format:

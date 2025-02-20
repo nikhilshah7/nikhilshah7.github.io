@@ -23,6 +23,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -108,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
         <li>
     <a class="dropdown-item" href="./tuesday2.html">
- <span class="dropdown-text">TBD 2</span></a>
+ <span class="dropdown-text">National Park Species</span></a>
   </li>  
     </ul>
   </li>
@@ -166,6 +200,53 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>This analysis uses data from the <a href="https://github.com/rfordatascience/tidytuesday/tree/main/data/2024/2024-10-08">October 8, 2024 TidyTuesday</a>.</p>
+<p>This is a dataset of species in American national parks, specifically the 15 most visited. The data is sourced from <a href="https://irma.nps.gov/NPSpecies/Search/SpeciesList">NPSpecies</a>, a tool maintained by the National Park Service (NPS)’s Integrated Resource Management Applications (IRMA). It includes taxonomy information and other characteristics like sensitivities and rarity for each species found in each park.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>species <span class="ot">&lt;-</span> species <span class="sc">|&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Family <span class="sc">==</span> <span class="st">'Mustelidae'</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">ParkName =</span> <span class="fu">str_replace</span>(ParkName, <span class="st">' National Park'</span>, <span class="st">''</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">ParkName =</span> <span class="fu">fct_infreq</span>(ParkName))</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>species <span class="sc">|&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">y =</span> ParkName)) <span class="sc">+</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">'National Park'</span>,</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">'# Species'</span>,</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">'Distinct species in family Mustelidae 15 national parks'</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="tuesday2_files/figure-html/Data Wrangling and Barplot-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This data displays the number of mustelid (weasels, badgers, otters) species in each of the 15 most visited national parks. This is because mustelids are my favorite taxon. I would have included my second-favorite taxon, pinnipeds (seals, sea lions, walruses), however I discovered there are none in any of the listed parks. The only conclusion I draw from this is that more people should visit Alaskan national parks.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 15 × 2
+   ParkName              count
+   &lt;chr&gt;                 &lt;int&gt;
+ 1 Glacier                   9
+ 2 Grand Teton               9
+ 3 Yellowstone               8
+ 4 Yosemite                  8
+ 5 Acadia                    7
+ 6 Great Smoky Mountains     7
+ 7 Olympic                   7
+ 8 Rocky Mountain            7
+ 9 Indiana Dunes             6
+10 Cuyahoga Valley           5
+11 Grand Canyon              4
+12 Bryce Canyon              3
+13 Hot Springs               3
+14 Zion                      3
+15 Joshua Tree               2</code></pre>
+</div>
+</div>
 
 
 

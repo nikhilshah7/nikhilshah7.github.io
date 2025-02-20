@@ -16,4 +16,4 @@ about:
     href: https://github.com/nikhilshah7/nikhilshah7.github.io
 ---
 
-This website currently contains two data visualization exercises.
+This is my website. It currently contains two data visualization exercises.
