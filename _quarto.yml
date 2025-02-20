@@ -13,7 +13,7 @@ website:
         text: Home
       - text: Data Viz
         menu:
-        - text: TBD
+        - text: Lichess.org
           href: tuesday1.qmd
         - text: TBD 2
           href: tuesday2.qmd

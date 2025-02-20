@@ -1,3 +1,12 @@
 ---
-title: "tuesday2"
+title: "National Park Species"
+description: |
+  Analysis of species in the most visited US national parks from TidyTuesday
+author: Nikhil Shah
+date: February 19, 2025
+format: html
 ---
+
+```{r}
+
+```
