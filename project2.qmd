@@ -9,11 +9,11 @@ format: html
 
 # Data
 
-The dataset is English Words by [dwyl (Github)](https://github.com/dwyl/english-words/blob/master/words.txt). It contains almost all of the words in the English dictionary
+The dataset is English Words by [dwyl (Github)](https://github.com/dwyl/english-words/blob/master/words.txt). It contains almost all of the words in the English dictionary.
 
 ```{r}
 #| label: Libraries and Data
-#| include: false
+#| warning: false
 
 library(tidyverse)
 library(stringi)
@@ -82,8 +82,6 @@ There are only 118 palindromes in this dataset. Of these, there's only one palin
 I think it's interesting how there seems to be some kind of inclination towards odd-length words, that have a unique letter in the middle, like "civic" or "refer" or "tenet". 
 
 ```{r}
-#| echo: false
-
 words_filtered |>
   ggplot(aes(x = length)) +
   geom_bar() +
