@@ -272,17 +272,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">sample_n</span>(words_filtered, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>            word length start
-1  unversatilely     13     u
-2         probed      6     p
-3         bedlar      6     b
-4       septated      8     s
-5   intelligence     12     i
-6     dogcatcher     10     d
-7       shoemold      8     s
-8        cracker      7     c
-9      phocomeli      9     p
-10       softner      7     s</code></pre>
+<pre><code>           word length start
+1        tutsan      6     t
+2  unpredictive     12     u
+3    butylamine     10     b
+4     becowards      9     b
+5     hundredth      9     h
+6       revenge      7     r
+7      mugiloid      8     m
+8    marshberry     10     m
+9     methodics      9     m
+10    bombastry      9     b</code></pre>
 </div>
 </div>
 </section>
@@ -296,17 +296,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sample_n</span>(palindromes, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>      word length start
-1    kayak      5     k
-2    dewed      5     d
-3      umu      3     u
-4      ihi      3     i
-5      gig      3     g
-6    refer      5     r
-7  sememes      7     s
-8    addda      5     a
-9      aga      3     a
-10      ii      2     i</code></pre>
+<pre><code>     word length start
+1  retter      6     r
+2     mum      3     m
+3    keek      4     k
+4     oho      3     o
+5     eye      3     e
+6     tyt      3     t
+7   rever      5     r
+8     mym      3     m
+9  selles      6     s
+10  kelek      5     k</code></pre>
 </div>
 </div>
 <p>A lot of palindromes are formed because of common suffixes. ‘Deified’, ‘reviver’, and ‘stats’ might be palindromes, but only because of a modifier that changes the root word. This shows how many words follow those structures.</p>
@@ -323,6 +323,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">'Single-Word Palindromes in English'</span></span>
 <span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>There are only 118 palindromes in this dataset. Of these, there’s only one palindrome longer than seven letters, and 29 are only palindromes because of a suffix, and the root word wouldn’t be one at all. In total, there are about 30 of them that you might encounter in your day-to-day life, which is only 1% of 1% of the words in English. I hear about palindromes constantly, but it turns out most of them are actually just engineered phrases like “race car” or “a man, a plan, a canal, panama”.</p>
+<p>I think it’s interesting how there seems to be some kind of inclination towards odd-length words, that have a unique letter in the middle, like “civic” or “refer” or “tenet”.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="project2_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>I tend to think of a syllable as a pair of a consonant sound and a vowel sound, and it looks like there’s a slight amount more of even-length words than odd in English, so I’m a bit surprised to see such a preference for odd-length ones out of the palindromes.</p>
 </section>
 <section id="anti-palindromes-or-reduplications" class="level1">
 <h1>Anti-Palindromes, or Reduplications</h1>
