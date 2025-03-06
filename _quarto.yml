@@ -17,6 +17,8 @@ website:
           href: tuesday1.qmd
         - text: National Park Species
           href: tuesday2.qmd
+      - href: project2.qmd
+        text: Full Text Analysis (Palindromes)
 
 format:
   html:
