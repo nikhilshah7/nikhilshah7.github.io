@@ -19,6 +19,8 @@ website:
           href: tuesday2.qmd
       - href: project2.qmd
         text: Full Text Analysis (Palindromes)
+      - href: project3.qmd
+        text: Simulation Study (Reverse 3-0 Odds)
 
 format:
   html:
