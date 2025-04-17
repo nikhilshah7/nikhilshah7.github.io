@@ -21,6 +21,8 @@ website:
         text: Full Text Analysis (Palindromes)
       - href: project3.qmd
         text: Simulation Study (Reverse 3-0 Odds)
+      - href: project4.qmd
+        text: Data Science Ethics (Biased Hiring Algorithm)
 
 format:
   html:
