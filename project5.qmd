@@ -83,7 +83,7 @@ WHERE time > '09:00:00' AND time < '17:00:00'
 GROUP BY day_segment;
 ```
 
-# This takes the overall data for a state, filters out times outside of the normal workday, adds a column that specifies what part of the day a stop occurred at based on the time, and splits the table into two parts for each part of the day. It averages the column "citation_issued", which is 1s for yes and 0s for no, to get the rate at which citations were issued at each part of the day. It combines this output for three different states into one table.
+This takes the overall data for a state, filters out times outside of the normal workday, adds a column that specifies what part of the day a stop occurred at based on the time, and splits the table into two parts for each part of the day. It averages the column "citation_issued", which is 1s for yes and 0s for no, to get the rate at which citations were issued at each part of the day. It combines this output for three different states into one table.
 
 ```{r}
 citations_and_warnings
