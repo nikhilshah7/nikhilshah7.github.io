@@ -23,6 +23,8 @@ website:
         text: Simulation Study (Reverse 3-0 Odds)
       - href: project4.qmd
         text: Data Science Ethics (Biased Hiring Algorithm)
+      - href: project5.qmd
+        text: SQL (Hungry Cop Effect)
 
 format:
   html:
