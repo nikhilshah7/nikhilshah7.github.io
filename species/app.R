@@ -26,8 +26,12 @@ ui <- fluidPage(
            selectInput("family", "Family:", 
                        choices = sort(unique(animals$Family)),
                        selected = "Mustelidae")
+    ),
+    column(6,
+           textOutput('sample')
     )
   ),
+  
   plotOutput("shinyplot")
 )
 
@@ -37,12 +41,20 @@ server <- function(input, output, session) {
     species |>
       filter(Family == input$family) |>
       ggplot(aes(y = ParkName)) +
-      geom_bar() +
+      geom_bar(fill = '#003f00') +
       labs(
         y = 'National Park',
         x = '# Species',
         title = paste('Distinct species in family', input$family, 'in most popular national parks')
-      )
+      ) +
+      theme_minimal()
+  })
+  
+  output$sample <- renderText({
+    family_species <- species |>
+      filter(Family == input$family)
+    
+    paste('Example species:', sample(family_species$CommonNames, 1))
   })
   
 }

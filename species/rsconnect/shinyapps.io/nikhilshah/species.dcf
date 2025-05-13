@@ -5,6 +5,6 @@ account: nikhilshah
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 14743911
-bundleId: 10274903
+bundleId: 10276285
 url: https://nikhilshah.shinyapps.io/species/
 version: 1
