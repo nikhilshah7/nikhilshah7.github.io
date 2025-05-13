@@ -150,6 +150,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link active" href="./project2.html" aria-current="page"> 
 <span class="menu-text">Full Text Analysis (Palindromes)</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./project3.html"> 
+<span class="menu-text">Simulation Study (Reverse 3-0 Odds)</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./project4.html"> 
+<span class="menu-text">Data Science Ethics (Biased Hiring Algorithm)</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./project5.html"> 
+<span class="menu-text">SQL (Hungry Cop Effect)</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -279,16 +291,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">sample_n</span>(words_filtered, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>            word length start
-1  ventriloquous     13     v
-2     microjoule     10     m
-3         siglum      6     s
-4      halfblood      9     h
-5      keyboards      9     k
-6        kinepox      7     k
-7       sacculus      8     s
-8   undersurface     12     u
-9         trolls      6     t
-10     unamusing      9     u</code></pre>
+1        sporran      7     s
+2         betels      6     b
+3    uncathartic     11     u
+4      relevying      9     r
+5   dissentiency     12     d
+6  unconsociable     13     u
+7        caracal      7     c
+8        haysuck      7     h
+9        abyssal      7     a
+10    dispurpose     10     d</code></pre>
 </div>
 </div>
 </section>
@@ -302,17 +314,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sample_n</span>(palindromes, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>     word length start
-1  degged      6     d
-2     ese      3     e
-3    toot      4     t
-4  hallah      6     h
-5    teet      4     t
-6   tipit      5     t
-7     mom      3     m
-8     hah      3     h
-9  tirrit      6     t
-10   ecce      4     e</code></pre>
+<pre><code>      word length start
+1     oooo      4     o
+2      ese      3     e
+3      eme      3     e
+4      iii      3     i
+5     toot      4     t
+6     acca      4     a
+7  deedeed      7     d
+8        a      1     a
+9    deled      5     d
+10    goog      4     g</code></pre>
 </div>
 </div>
 <p>A lot of palindromes are formed because of common suffixes. ‘Deified’, ‘reviver’, and ‘stats’ might be palindromes, but only because of a modifier that changes the root word. This shows how many words follow those structures.</p>
@@ -380,7 +392,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">'dodge'</span>, <span class="at">stat =</span> <span class="st">'identity'</span>) <span class="sc">+</span></span>
 <span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
 <span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">'Letter'</span>,</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">'Frequency (%)'</span>,</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">'Frequency (Percentage of Overall Set)'</span>,</span>
 <span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">'Starting Letters of Anti-Palindromes'</span></span>
 <span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">

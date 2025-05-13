@@ -1,0 +1,59 @@
+---
+title: "National Park Species"
+description: |
+  Analysis of species in the most visited US national parks from TidyTuesday
+author: Nikhil Shah
+date: February 19, 2025
+format: html
+execute:
+  shiny: true
+runtime: shiny
+---
+
+## Introduction
+
+This analysis uses data from the [October 8, 2024 TidyTuesday](https://github.com/rfordatascience/tidytuesday/tree/main/data/2024/2024-10-08).
+
+This is a dataset of species in American national parks, specifically the 15 most visited. The data is sourced from [NPSpecies](https://irma.nps.gov/NPSpecies/Search/SpeciesList), a tool maintained by the National Park Service (NPS)'s Integrated Resource Management Applications (IRMA). It includes taxonomy information and other characteristics like sensitivities and rarity for each species found in each park.
+
+## Analysis
+
+### Data Import
+
+```{r}
+#| label: Data Import
+#| warning: false
+
+library(tidyverse)
+library(shiny)
+
+species <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-10-08/most_visited_nps_species_data.csv')
+```
+### Data Wrangling and Mustelid Barplot
+
+```{r}
+#| label: Data Wrangling and Mustelid Barplot
+
+species <- species |>
+  mutate(ParkName = str_replace(ParkName, ' National Park', '')) |>
+  mutate(ParkName = fct_infreq(ParkName))
+
+species |>
+  filter(Family == 'Mustelidae') |>
+  ggplot(aes(y = ParkName)) +
+  geom_bar() +
+  labs(
+    y = 'National Park',
+    x = '# Species',
+    title = 'Distinct species in family Mustelidae in 15 national parks'
+  )
+```
+
+This data displays the number of mustelid (weasels, badgers, otters) species in each of the 15 most visited national parks. This is because mustelids are my favorite taxon. I would have included my second-favorite taxon, pinnipeds (seals, sea lions, walruses), however I discovered there are none in any of the listed parks. The only conclusion I draw from this is that more people should visit Alaskan national parks.
+
+You can edit the plot to show how prolific any mammal family is within this subset of national parks using an interactive Shiny app, accessible [here](https://nikhilshah7.github.io/dataviz3.html).
+
+## References
+
+ * [TidyTuesday, National Park Species. *R For Data Science*, October 8, 2024.](https://github.com/rfordatascience/tidytuesday/tree/main/data/2024/2024-10-08)
+ * [NPSpecies, Species List. *U.S. National Park Service.*](https://irma.nps.gov/NPSpecies/Search/SpeciesList)

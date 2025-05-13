@@ -186,12 +186,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#sql-connection" id="toc-sql-connection" class="nav-link" data-scroll-target="#sql-connection">SQL Connection</a></li>
   <li><a href="#query" id="toc-query" class="nav-link" data-scroll-target="#query">Query</a></li>
   </ul></li>
-  <li><a href="#this-takes-the-overall-data-for-a-state-filters-out-times-outside-of-the-normal-workday-adds-a-column-that-specifies-what-part-of-the-day-a-stop-occurred-at-based-on-the-time-and-splits-the-table-into-two-parts-for-each-part-of-the-day.-it-averages-the-column-citation_issued-which-is-1s-for-yes-and-0s-for-no-to-get-the-rate-at-which-citations-were-issued-at-each-part-of-the-day.-it-combines-this-output-for-three-different-states-into-one-table." id="toc-this-takes-the-overall-data-for-a-state-filters-out-times-outside-of-the-normal-workday-adds-a-column-that-specifies-what-part-of-the-day-a-stop-occurred-at-based-on-the-time-and-splits-the-table-into-two-parts-for-each-part-of-the-day.-it-averages-the-column-citation_issued-which-is-1s-for-yes-and-0s-for-no-to-get-the-rate-at-which-citations-were-issued-at-each-part-of-the-day.-it-combines-this-output-for-three-different-states-into-one-table." class="nav-link" data-scroll-target="#this-takes-the-overall-data-for-a-state-filters-out-times-outside-of-the-normal-workday-adds-a-column-that-specifies-what-part-of-the-day-a-stop-occurred-at-based-on-the-time-and-splits-the-table-into-two-parts-for-each-part-of-the-day.-it-averages-the-column-citation_issued-which-is-1s-for-yes-and-0s-for-no-to-get-the-rate-at-which-citations-were-issued-at-each-part-of-the-day.-it-combines-this-output-for-three-different-states-into-one-table.">This takes the overall data for a state, filters out times outside of the normal workday, adds a column that specifies what part of the day a stop occurred at based on the time, and splits the table into two parts for each part of the day. It averages the column “citation_issued”, which is 1s for yes and 0s for no, to get the rate at which citations were issued at each part of the day. It combines this output for three different states into one table.</a>
-  <ul class="collapse">
   <li><a href="#visualization" id="toc-visualization" class="nav-link" data-scroll-target="#visualization">Visualization</a></li>
   <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">Interpretation</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
@@ -301,10 +298,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> <span class="dt">time</span> <span class="op">&gt;</span> <span class="st">'09:00:00'</span> <span class="kw">AND</span> <span class="dt">time</span> <span class="op">&lt;</span> <span class="st">'17:00:00'</span></span>
 <span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> day_segment;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-</section>
-<section id="this-takes-the-overall-data-for-a-state-filters-out-times-outside-of-the-normal-workday-adds-a-column-that-specifies-what-part-of-the-day-a-stop-occurred-at-based-on-the-time-and-splits-the-table-into-two-parts-for-each-part-of-the-day.-it-averages-the-column-citation_issued-which-is-1s-for-yes-and-0s-for-no-to-get-the-rate-at-which-citations-were-issued-at-each-part-of-the-day.-it-combines-this-output-for-three-different-states-into-one-table." class="level1">
-<h1>This takes the overall data for a state, filters out times outside of the normal workday, adds a column that specifies what part of the day a stop occurred at based on the time, and splits the table into two parts for each part of the day. It averages the column “citation_issued”, which is 1s for yes and 0s for no, to get the rate at which citations were issued at each part of the day. It combines this output for three different states into one table.</h1>
+<p>This takes the overall data for a state, filters out times outside of the normal workday, adds a column that specifies what part of the day a stop occurred at based on the time, and splits the table into two parts for each part of the day. It averages the column “citation_issued”, which is 1s for yes and 0s for no, to get the rate at which citations were issued at each part of the day. It combines this output for three different states into one table.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>citations_and_warnings</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -318,6 +312,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>The final data from the SQL query shows one row for each pairing of state and part of the day, and the proportion of traffic stops resulting in a citation or a warning in each.</p>
+</section>
+</section>
 <section id="visualization" class="level2">
 <h2 class="anchored" data-anchor-id="visualization">Visualization</h2>
 <div class="cell">
@@ -336,7 +332,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="project5_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="project5_files/figure-html/plots-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -354,7 +350,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="project5_files/figure-html/unnamed-chunk-5-2.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="project5_files/figure-html/plots-2.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -369,12 +365,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
 <ul>
-<li><p>Danziger, Shal, Jonathan Levav, Liora Avnaim-Pesso. 2011. “Extraneous Factors in Judicial Decisions.” <em>Proc. Natl. Acad. Sci. U.S.A.</em>, 108 (17) 6889-6892.</p></li>
-<li><p>Pierson, Emma, Camelia Simoiu, Jan Overgoor, Sam Corbett-Davies, Daniel Jenson, Amy Shoemaker, Vignesh Ramachandran, et al.&nbsp;2020. “A Large-Scale Analysis of Racial Disparities in Police Stops Across the United States.” <em>Nature Human Behaviour</em>, 1–10.</p></li>
+<li><p><a href="https://www.pnas.org/doi/full/10.1073/pnas.1018033108">Danziger, Shal, Jonathan Levav, Liora Avnaim-Pesso (2011). “Extraneous Factors in Judicial Decisions.” <em>Proc. Natl. Acad. Sci. U.S.A.</em>, 108 (17) 6889-6892.</a></p></li>
+<li><p><a href="https://www.nature.com/articles/s41562-020-0858-1">Pierson, Emma, Camelia Simoiu, Jan Overgoor, Sam Corbett-Davies, Daniel Jenson, Amy Shoemaker, Vignesh Ramachandran, et al.&nbsp;(2020). “A Large-Scale Analysis of Racial Disparities in Police Stops Across the United States.” <em>Nature Human Behaviour</em>, 1–10.</a></p></li>
 </ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

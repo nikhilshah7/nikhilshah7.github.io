@@ -6,8 +6,8 @@ about:
   template: trestles
   image-shape: rectangle
   links:
-#  - text: LinkedIn
-#    href: https://www.linkedin.com/in/samanthacsik/
+  - text: LinkedIn
+    href: https://www.linkedin.com/in/nikhil-shah-ab1587278/
   - text: GitHub
     href: https://github.com/nikhilshah7
   - text: Email
@@ -16,4 +16,4 @@ about:
     href: https://github.com/nikhilshah7/nikhilshah7.github.io
 ---
 
-This is my website. It currently contains two data visualization exercises.
+My name is Nikhil Shah and I'm an upcoming senior at Pitzer College majoring in Environmental Science and Policy, with a minor in Data Science. This website currently contains a collection of data science mini-projects, and will soon be updated to include larger projects and other content.
