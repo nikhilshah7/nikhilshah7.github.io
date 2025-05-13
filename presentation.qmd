@@ -22,7 +22,7 @@ execute:
 
 ## Initial Project
 
-- Very simple and mostly meaningless chart of how many species of one specific animal family are in various national parks
+- Very simple and mostly unhelpful chart of how many species of one specific animal family are in various national parks
 ```{r}
 #| warning: false
 #| echo: false
@@ -65,8 +65,8 @@ species |>
 
 ## Updated Project
 
-- Interactive Shiny tool to control which mammal taxon is displayed by the plot
-- Also not very useful but much more fun and informative
+- Interactive Shiny tool to control which animal taxon is displayed by the plot
+- Moderately more useful as you can see what types of natural spaces are primarily home to every category of animal
 - Shows a randomly-sampled common species name from the selected family to make it more understandable
 - [Link to code](https://nikhilshah7.github.io/dataviz3.html)
 - [Link to app](https://nikhilshah.shinyapps.io/species/)
