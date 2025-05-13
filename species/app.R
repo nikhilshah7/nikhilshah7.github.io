@@ -1,19 +1,11 @@
----
-title: "National Park Species (Interactive)"
-description: |
-  Analysis of species in the most visited US national parks from TidyTuesday
-author: Nikhil Shah
-date: February 19, 2025
-format: html
-execute:
-  shiny: true
-runtime: shiny
----
-
-```{r}
-#| warning: false
-#| message: false
-
+#
+# This is a Shiny web application. You can run the application by clicking
+# the 'Run App' button above.
+#
+# Find out more about building applications with Shiny here:
+#
+#    https://shiny.posit.co/
+#
 library(tidyverse)
 
 species <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-10-08/most_visited_nps_species_data.csv')
@@ -25,21 +17,15 @@ species <- species |>
   mutate(ParkName = str_replace(ParkName, ' National Park', '')) |>
   mutate(ParkName = fct_infreq(ParkName))
 
-```
-
-
-```{r}
-#| warning: false
-#| message: false
 
 library(shiny)
 
 ui <- fluidPage(
   fluidRow(
     column(6,
-      selectInput("family", "Family:", 
-                  choices = sort(unique(animals$Family)),
-                  selected = "Mustelidae")
+           selectInput("family", "Family:", 
+                       choices = sort(unique(animals$Family)),
+                       selected = "Mustelidae")
     )
   ),
   plotOutput("shinyplot")
@@ -62,6 +48,3 @@ server <- function(input, output, session) {
 }
 
 shinyApp(ui = ui, server = server)
-```
-
-https://nikhilshah.shinyapps.io/species/

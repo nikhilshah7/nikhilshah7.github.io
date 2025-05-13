@@ -67,4 +67,5 @@ species |>
 
 - Interactive Shiny tool to control which mammal taxon is displayed by the plot
 - Also not very useful but much more fun and informative
-- [Link](https://nikhilshah7.github.io/dataviz3.html)
+- [Link to code](https://nikhilshah7.github.io/dataviz3.html)
+- [Link to app](https://nikhilshah.shinyapps.io/species/)

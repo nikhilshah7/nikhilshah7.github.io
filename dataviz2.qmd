@@ -51,7 +51,10 @@ species |>
 
 This data displays the number of mustelid (weasels, badgers, otters) species in each of the 15 most visited national parks. This is because mustelids are my favorite taxon. I would have included my second-favorite taxon, pinnipeds (seals, sea lions, walruses), however I discovered there are none in any of the listed parks. The only conclusion I draw from this is that more people should visit Alaskan national parks.
 
-You can edit the plot to show how prolific any mammal family is within this subset of national parks using an interactive Shiny app, accessible [here](https://nikhilshah7.github.io/dataviz3.html).
+You can edit the plot to show how prolific any mammal family is within this subset of national parks using an interactive Shiny app.
+
+ * [Shiny App Code](https://nikhilshah7.github.io/dataviz3.html)
+ * [Interactive](https://nikhilshah.shinyapps.io/species/)
 
 ## References
 
