@@ -21,7 +21,7 @@ website:
           href: dataviz3.qmd
         - text: Text Analysis (Palindromes)
           href: textanalysis.qmd
-        - text: Simulation (Reverse 3-0 Odds)
+        - text: Simulation (Reverse 3-0s)
           href: simulation.qmd
         - text: Data Science Ethics (Biased Hiring Algorithm)
           href: ethics.qmd

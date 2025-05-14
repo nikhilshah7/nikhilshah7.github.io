@@ -189,7 +189,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#data" id="toc-data" class="nav-link active" data-scroll-target="#data">Data</a></li>
   <li><a href="#palindromes" id="toc-palindromes" class="nav-link" data-scroll-target="#palindromes">Palindromes</a></li>
-  <li><a href="#anti-palindromes-or-reduplications" id="toc-anti-palindromes-or-reduplications" class="nav-link" data-scroll-target="#anti-palindromes-or-reduplications">Anti-Palindromes, or Reduplications</a></li>
+  <li><a href="#anti-palindromes-reduplications" id="toc-anti-palindromes-reduplications" class="nav-link" data-scroll-target="#anti-palindromes-reduplications">Anti-Palindromes (Reduplications)</a></li>
   </ul>
 </nav>
     </div>
@@ -232,8 +232,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="data" class="level1">
-<h1>Data</h1>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
 <p>The dataset is English Words by <a href="https://github.com/dwyl/english-words/blob/master/words.txt">dwyl (Github)</a>. It contains almost all of the words in the English dictionary.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
@@ -298,22 +298,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">sample_n</span>(words_filtered, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>                 word length start
-1    unanswerableness     16     u
-2           cataracts      9     c
-3  psychoneurological     18     p
-4          walkmiller     10     w
-5              baltei      6     b
-6          diploidize     10     d
-7            plantain      8     p
-8           moundwork      9     m
-9               steak      5     s
-10        swordplayer     11     s</code></pre>
+<pre><code>           word length start
+1  preballoting     12     p
+2         boffo      5     b
+3         criss      5     c
+4  unsecretness     12     u
+5     soldiered      9     s
+6       fucosan      7     f
+7   roosterfish     11     r
+8       samsara      7     s
+9   refractions     11     r
+10    brutalize      9     b</code></pre>
 </div>
 </div>
 </section>
-<section id="palindromes" class="level1">
-<h1>Palindromes</h1>
+<section id="palindromes" class="level2">
+<h2 class="anchored" data-anchor-id="palindromes">Palindromes</h2>
 <p>A palindrome is any word (or set of words) that is the same when the letters are reversed.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>palindromes <span class="ot">&lt;-</span> words_filtered <span class="sc">|&gt;</span></span>
@@ -322,17 +322,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sample_n</span>(palindromes, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>      word length start
-1    kayak      5     k
-2      waw      3     w
-3  repaper      7     r
-4    solos      5     s
-5  deedeed      7     d
-6   pullup      6     p
-7    addda      5     a
-8   tibbit      6     t
-9      iii      3     i
-10 reifier      7     r</code></pre>
+<pre><code>     word length start
+1     usu      3     u
+2   sexes      5     s
+3    maam      4     m
+4     ana      3     a
+5   addda      5     a
+6       o      1     o
+7   civic      5     c
+8  tibbit      6     t
+9  degged      6     d
+10    mem      3     m</code></pre>
 </div>
 </div>
 <p>A lot of palindromes are formed because of common suffixes. ‘Deified’, ‘reviver’, and ‘stats’ might be palindromes, but only because of a modifier that changes the root word. This shows how many words follow those structures.</p>
@@ -371,8 +371,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>I tend to think of a syllable as a pair of a consonant sound and a vowel sound, and there’s a slight amount more of even-length words than odd in English, so I’m a bit surprised to see such a preference for odd-length ones out of the palindromes.</p>
 </section>
-<section id="anti-palindromes-or-reduplications" class="level1">
-<h1>Anti-Palindromes, or Reduplications</h1>
+<section id="anti-palindromes-reduplications" class="level2">
+<h2 class="anchored" data-anchor-id="anti-palindromes-reduplications">Anti-Palindromes (Reduplications)</h2>
 <p>While trying to work out a way to find palindromes with stringr functions (apparently R does not have reverse indexing like Python does so this is either not possible or very convoluted) I accidentally came up with a list of “anti-palindromes”, where the back half of the word is also the front half of the word. If “toot” is a palindrome, “toto” is an anti-palindrome.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>reduplications <span class="ot">&lt;-</span> words_filtered <span class="sc">|&gt;</span> </span>

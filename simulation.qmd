@@ -1,15 +1,15 @@
 ---
-title: "Reverse 3-0 Odds"
+title: "Reverse 3-0s"
 description: |
-  Simulating best-of-5 tournament matches to estimate the odds of a reverse 3-0
+  Simulating best-of-5 tournament matches to estimate the chances of a reverse 3-0
 author: Nikhil Shah
 date: April 2, 2025
 format: html
 ---
 
-In a best-of-5 set, a reverse 3-0 occurs when one side loses the first two games, and then wins the next three to win a set. It's an uncommon and extremely exciting (or heartbreaking) phenomenon, and it can seem to often much more likely or much less often than you would expect. I want to estimate how frequently this happens when a set starts 2-0, depending on the relative strength of both sides.
+In a best-of-5 set, a reverse 3-0 occurs when one side loses the first two games, and then wins the next three to win a set. It's an uncommon and extremely exciting (or heartbreaking) phenomenon, and it can be pretty difficult to predict when it might occur. I want to estimate how frequently this happens when a set starts 2-0, depending on the relative strength of both sides.
 
-This needs some assumptions. Firstly, the odds of one player or team to win a game heavily depends on relative skill, the volatility of the game, and maybe luck. Without looking at data from a specific game, we can create odds that seem to make sense.
+This needs some assumptions. Firstly, the chance of one player or team to win a game heavily depends on relative skill, the volatility of the game, and maybe luck. Without looking at data from a specific game, we can create chances that seem to make sense.
 
 We also have to look at players/teams of a somewhat comparable skill. If you were watching a best-of-5 tournament match, and you saw one side go down 0-2, you would only wonder if they could win the match if they were capable of making it competitive. In a 1024-entrant bracket, odds are, the 1st seed will beat the 1024th seed, and the 512th seed, and the 256th seed handily in a 3-0. While those could technically be a reverse 3-0 after the first two games, it's very unlikely and nobody would expect it to happen. We want to look at matches where some competitiveness is expected.
 
@@ -17,7 +17,7 @@ We can use a 16-player tournament, and assume that, in a vacuum, the odds of one
 
 Let's create a hypothetical match between a random pairing of two seeds from 1-16. We can take one side's odds of winning a game to the power of three and determine the chance of them winning three games in a row. However, since we want to know the chance of a reverse sweep rather than just a sweep, we need to account for the fact that the player or team that goes up 2-0 might have some additional advantage specifically related to that opponent: experience in the matchup, knowledge of habits or strategies, a favorable difference in skill sets, etc. Therefore, the other side's chance of winning a game is most likely lower than initially assumed.
 
-How can we account for this? If you flip a coin twice, 25% of the time, it'll land on tails twice by pure random chance. In that spirit, let's say there was a 25% chance that the 2-0 start was purely based on random variability, and reduce the losing side's new odds of winning a game by 25%. Based on my general experience with spectating tournaments, this is a somewhat accurate measure.
+How can we account for this? If you flip a coin twice, 25% of the time, it'll land on tails twice by pure random chance. In that spirit, let's say that when a set starts 2-0, 75% of the time it's because of a difference in skill or preparation, and 25% of the time it happened just because of variability with no real pattern beneath it. We can take the losing side's initial estimated chance of winning, and reduce it by 25% to account for this factor. Based on my general experience with spectating tournaments, this is a somewhat accurate measure.
 
 ```{r}
 #| warning: false

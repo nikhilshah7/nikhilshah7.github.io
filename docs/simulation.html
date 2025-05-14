@@ -8,9 +8,9 @@
 
 <meta name="author" content="Nikhil Shah">
 <meta name="dcterms.date" content="2025-04-02">
-<meta name="description" content="Simulating best-of-5 tournament matches to estimate the odds of a reverse 3-0">
+<meta name="description" content="Simulating best-of-5 tournament matches to estimate the chances of a reverse 3-0">
 
-<title>Reverse 3-0 Odds – Nikhil Shah</title>
+<title>Reverse 3-0s – Nikhil Shah</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -154,7 +154,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
         <li>
     <a class="dropdown-item" href="./simulation.html">
- <span class="dropdown-text">Simulation (Reverse 3-0 Odds)</span></a>
+ <span class="dropdown-text">Simulation (Reverse 3-0s)</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./ethics.html">
@@ -190,12 +190,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Reverse 3-0 Odds</h1>
+<h1 class="title">Reverse 3-0s</h1>
 </div>
 
 <div>
   <div class="description">
-    <p>Simulating best-of-5 tournament matches to estimate the odds of a reverse 3-0</p>
+    <p>Simulating best-of-5 tournament matches to estimate the chances of a reverse 3-0</p>
   </div>
 </div>
 
@@ -224,12 +224,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>In a best-of-5 set, a reverse 3-0 occurs when one side loses the first two games, and then wins the next three to win a set. It’s an uncommon and extremely exciting (or heartbreaking) phenomenon, and it can seem to often much more likely or much less often than you would expect. I want to estimate how frequently this happens when a set starts 2-0, depending on the relative strength of both sides.</p>
-<p>This needs some assumptions. Firstly, the odds of one player or team to win a game heavily depends on relative skill, the volatility of the game, and maybe luck. Without looking at data from a specific game, we can create odds that seem to make sense.</p>
+<p>In a best-of-5 set, a reverse 3-0 occurs when one side loses the first two games, and then wins the next three to win a set. It’s an uncommon and extremely exciting (or heartbreaking) phenomenon, and it can be pretty difficult to predict when it might occur. I want to estimate how frequently this happens when a set starts 2-0, depending on the relative strength of both sides.</p>
+<p>This needs some assumptions. Firstly, the chance of one player or team to win a game heavily depends on relative skill, the volatility of the game, and maybe luck. Without looking at data from a specific game, we can create chances that seem to make sense.</p>
 <p>We also have to look at players/teams of a somewhat comparable skill. If you were watching a best-of-5 tournament match, and you saw one side go down 0-2, you would only wonder if they could win the match if they were capable of making it competitive. In a 1024-entrant bracket, odds are, the 1st seed will beat the 1024th seed, and the 512th seed, and the 256th seed handily in a 3-0. While those could technically be a reverse 3-0 after the first two games, it’s very unlikely and nobody would expect it to happen. We want to look at matches where some competitiveness is expected.</p>
 <p>We can use a 16-player tournament, and assume that, in a vacuum, the odds of one side winning a game are the the ratio of the two teams’ seeds. For instance, seed 1 has a 1:2 chance of beating seed 2 (67%), seed 16 has a 16:1 chance of beating seed 1 (6%), and seed 15 has 15:16 odds of beating seed 16 (48%). Each of these matches would be competitive, with a significant degree of variability, which makes it interesting.</p>
 <p>Let’s create a hypothetical match between a random pairing of two seeds from 1-16. We can take one side’s odds of winning a game to the power of three and determine the chance of them winning three games in a row. However, since we want to know the chance of a reverse sweep rather than just a sweep, we need to account for the fact that the player or team that goes up 2-0 might have some additional advantage specifically related to that opponent: experience in the matchup, knowledge of habits or strategies, a favorable difference in skill sets, etc. Therefore, the other side’s chance of winning a game is most likely lower than initially assumed.</p>
-<p>How can we account for this? If you flip a coin twice, 25% of the time, it’ll land on tails twice by pure random chance. In that spirit, let’s say there was a 25% chance that the 2-0 start was purely based on random variability, and reduce the losing side’s new odds of winning a game by 25%. Based on my general experience with spectating tournaments, this is a somewhat accurate measure.</p>
+<p>How can we account for this? If you flip a coin twice, 25% of the time, it’ll land on tails twice by pure random chance. In that spirit, let’s say that when a set starts 2-0, 75% of the time it’s because of a difference in skill or preparation, and 25% of the time it happened just because of variability with no real pattern beneath it. We can take the losing side’s initial estimated chance of winning, and reduce it by 25% to account for this factor. Based on my general experience with spectating tournaments, this is a somewhat accurate measure.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(purrr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -278,7 +278,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">chance =</span> <span class="fu">mean</span>(reverse_sweep))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  chance
-1   0.08</code></pre>
+1  0.077</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plots the data</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span></span>

@@ -111,12 +111,16 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Data Viz (National Park Species)</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="./dataviz3.html">
+ <span class="dropdown-text">Data Viz (Species Interactive App)</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./textanalysis.html">
  <span class="dropdown-text">Text Analysis (Palindromes)</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./simulation.html">
- <span class="dropdown-text">Simulation (Reverse 3-0 Odds)</span></a>
+ <span class="dropdown-text">Simulation (Reverse 3-0s)</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./ethics.html">
@@ -151,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis">Analysis</a></li>
-  <li><a href="#sources" id="toc-sources" class="nav-link" data-scroll-target="#sources">Sources</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
     </div>
@@ -194,19 +198,19 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introduction" class="level3">
-<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>In the mid-2010s, Amazon developed an AI-based tool trained to evaluate resumes to output the best possible candidates without the need for human review. This project failed, because it turned out the training data and the output was biased against women.</p>
 </section>
-<section id="analysis" class="level3">
-<h3 class="anchored" data-anchor-id="analysis">Analysis</h3>
+<section id="analysis" class="level2">
+<h2 class="anchored" data-anchor-id="analysis">Analysis</h2>
 <p>This failure stems from the lack of adherence to one of the principles of data science, which suggests to “build teams with diverse ideas, backgrounds, and strengths.” According to the ACLU, Amazon’s workforce was predominantly male, which led to the subset of “successful resumes” being predominantly male, so the algorithm learned that characteristics that could have been associated with women were not favorable (Goodman, 2018). Notably, the Reuters report claims that the bias was primarily due to disproportionate gender ratios in the applications themselves, rather than the existing workforce (Dastin, 2018), but it’s fair to assume that a skewed workforce would perpetuate that ratio and so the premise is essentially the same - a lack of diversity in Amazon led to a discriminatory hiring algorithm.</p>
 <p>Another principle for which the project falls short is that it does not use data to improve lives. In fact, pioneering a discriminatory technology that would go on to be implemented on massive scales ten years later, governing a major factor in peoples’ quality of life (their employment), most likely played a significant role in making lives worse, even if the algorithm itself was scrapped. In the 1970s, IBM stated that “a computer can never be held accountable, therefore a computer must never make a management decision.” While collecting data for the sake of knowledege is okay, a machine-learning algorithm should not be given the power to have a tangible negative effect on human lives. Going through with this project without taking great care to prevent bias in the algorithm’s training data and thus its output may have contributed to this ideal being violated.</p>
 <p>I think it’s generally okay for gender to be used as a variable for data analysis purposes specifically. When collecting data on people, and that data is actionable, such as data collected on social media platforms for targeted advertising, or data collected by companies for hiring, collecting data on social categories like gender can very easily be intrusive and unethical, with the potential to be misused. However, in studies, especially when there’s a potential connection between those social categories and another variable, it can be very important to collect that data. If gender data had not been collected in this case, there would be no way of knowing about the discrimination that was occurring. Overall, the distinction probably lies in whether gender as a variable is pertinent to the project, and whether that data can be used to cause harm to the participants.</p>
 <p>Data collection and processing in this case was most likely not conducted ethically. While the training data could have been gathered consensually (since it was from employees of the company), the project was conducted behind closed doors; actual applicants weren’t aware that their applications were being evaluated by a machine-learning algorithm. They had no way of knowing that their information was being used in a computer program which could discriminate against them for factors out of their control. On a few applications for jobs and internships, I’ve been asked whether or not I’d like to opt out of an AI evaluation of my application. While I did opt out, I imagine some or most other companies aren’t giving me the option because that was their default option. This worries me - how do I know my resume isn’t being used to train ChatGPT to hire people based on some immutable characteristic? Not only would this project have been unethical, it could have set a standard that green-lighted the same unethical behavior for broad use in the future.</p>
 </section>
-<section id="sources" class="level3">
-<h3 class="anchored" data-anchor-id="sources">Sources</h3>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
 <ul>
 <li><a href="https://www.reuters.com/article/us-amazon-com-jobs-automation-insight-idUSKCN1MK08G/">Dastin, Jeffrey (2018). “Amazon scraps secret AI recruiting tool that showed bias against women.” Reuters.</a></li>
 <li><a href="https://www.aclu.org/news/womens-rights/why-amazons-automated-hiring-tool-discriminated-against">Goodman, Rachel (2018). “Why Amazon’s Automated Hiring Tool Discriminated Against Women.” ACLU.</a></li>
