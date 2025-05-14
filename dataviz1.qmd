@@ -44,7 +44,8 @@ chess |>
   labs(
     x = 'Opening Move',
     y = 'Number of Games',
-    title = 'Frequency of opening moves for white on Lichess.com'
+    title = 'Frequency of opening moves for white on Lichess.org',
+    alt = 'Bar chart showing the frequency of opening moves for white on Lichess.org, ordered by frequency. e4, d4, Nf3, c4 are the highest, the rest are largely negligible.'
   )
   
 ```

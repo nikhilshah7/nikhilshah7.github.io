@@ -154,7 +154,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
         <li>
     <a class="dropdown-item" href="./simulation.html">
- <span class="dropdown-text">Simulation (Reverse 3-0 Odds)</span></a>
+ <span class="dropdown-text">Simulation (Reverse 3-0s)</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./ethics.html">
@@ -298,17 +298,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">sample_n</span>(words_filtered, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>           word length start
-1  preballoting     12     p
-2         boffo      5     b
-3         criss      5     c
-4  unsecretness     12     u
-5     soldiered      9     s
-6       fucosan      7     f
-7   roosterfish     11     r
-8       samsara      7     s
-9   refractions     11     r
-10    brutalize      9     b</code></pre>
+<pre><code>              word length start
+1           achime      6     a
+2        macerater      9     m
+3  nonpromulgation     15     n
+4         nicotian      8     n
+5     unvoluptuous     12     u
+6      postfrontal     11     p
+7         niteries      8     n
+8     extralegally     12     e
+9            crash      5     c
+10          unclot      6     u</code></pre>
 </div>
 </div>
 </section>
@@ -323,16 +323,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sample_n</span>(palindromes, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     word length start
-1     usu      3     u
-2   sexes      5     s
-3    maam      4     m
-4     ana      3     a
-5   addda      5     a
-6       o      1     o
-7   civic      5     c
-8  tibbit      6     t
-9  degged      6     d
-10    mem      3     m</code></pre>
+1     eme      3     e
+2    affa      4     a
+3  terret      6     t
+4     gig      3     g
+5   torot      5     t
+6   alula      5     a
+7     yay      3     y
+8    goog      4     g
+9     tet      3     t
+10    awa      3     a</code></pre>
 </div>
 </div>
 <p>A lot of palindromes are formed because of common suffixes. ‘Deified’, ‘reviver’, and ‘stats’ might be palindromes, but only because of a modifier that changes the root word. This shows how many words follow those structures.</p>
@@ -346,8 +346,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
 <span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">'Word Length'</span>,</span>
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">'# of Palindromes'</span>,</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">'Single-Word Palindromes in English'</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">'Single-Word Palindromes in English'</span>,</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">alt =</span> <span class="st">'Bar chart showing the word lengths of single-word palindromes in English. Bars are separated into two sections, with the minority of most columns indicating that they end in a common suffix such as an s. Words are concentrated from length 3-7, mainly 3 and 5.'</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>There are only 118 palindromes in this dataset. Of these, there’s only one palindrome longer than seven letters, and 29 are only palindromes because of a suffix, and the root word wouldn’t be one at all. In total, there are about 30 of them that you might encounter in your day-to-day life, which is only 1% of 1% of the words in English. I hear about palindromes constantly, but it turns out most of them are actually just engineered phrases like “race car” or “a man, a plan, a canal, panama”.</p>
 <p>I think it’s interesting how there seems to be some kind of inclination towards odd-length words, that have a unique letter in the middle, like “civic” or “refer” or “tenet”.</p>
@@ -359,8 +360,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">'Even or Odd?'</span>,</span>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">'# of Words'</span>,</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">'Lengths of English Words'</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">'Lengths of English Words'</span>,</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">alt =</span> <span class="st">'Simple bar chart showing how many English words are an odd or even length. Very slightly more are even.'</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -402,8 +404,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
 <span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">'Letter'</span>,</span>
 <span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">'Frequency (Percentage of Overall Set)'</span>,</span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">'Starting Letters of Anti-Palindromes'</span></span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">'Starting Letters of Anti-Palindromes'</span>,</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">alt =</span> <span class="st">'Bar chart showing the frequency of starting letters for anti-palindromes, as well as the English language as a whole, ordered alphabetically. Highest for English are S, P, C, A, U. Highest for anti-palindromes are T, K, M, G, B, P.'</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">

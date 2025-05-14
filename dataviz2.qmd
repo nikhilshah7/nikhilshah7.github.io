@@ -45,7 +45,8 @@ species |>
   labs(
     y = 'National Park',
     x = '# Species',
-    title = 'Distinct species in family Mustelidae in 15 national parks'
+    title = 'Distinct species in family Mustelidae in 15 national parks',
+    alt = 'Bar chart showing how many species in family Mustelidae are in the fifteen most visited U.S. national parks, including Yosemite, Acadia, Grand Teton, and more. Grand Teton and Indiana Dunes have the most species, with nine apiece.'
   )
 ```
 

@@ -78,7 +78,8 @@ data |>
     x = 'Upset Factor',
     y = 'Reverse 3-0 Chance',
     fill = 'Did It Happen?',
-    title = 'Reverse Sweep Odds Depending on Seed Differential'
+    title = 'Reverse Sweep Chance Depending on Seed Differential',
+    alt = 'Bar chart showing the chance of a reverse sweep for a range of seed differentials, based on a simulation of 1000 trials. Probability decreases linearly, and ranges from about 40% for -8 to 0% for 4 and above.'
   )
 
 ```

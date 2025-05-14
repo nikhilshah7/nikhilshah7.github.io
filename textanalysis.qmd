@@ -74,7 +74,8 @@ palindromes |>
   labs(
     x = 'Word Length',
     y = '# of Palindromes',
-    title = 'Single-Word Palindromes in English'
+    title = 'Single-Word Palindromes in English',
+    alt = 'Bar chart showing the word lengths of single-word palindromes in English. Bars are separated into two sections, with the minority of most columns indicating that they end in a common suffix such as an s. Words are concentrated from length 3-7, mainly 3 and 5.'
   )
 ```
 There are only 118 palindromes in this dataset. Of these, there's only one palindrome longer than seven letters, and 29 are only palindromes because of a suffix, and the root word wouldn't be one at all. In total, there are about 30 of them that you might encounter in your day-to-day life, which is only 1% of 1% of the words in English. I hear about palindromes constantly, but it turns out most of them are actually just engineered phrases like "race car" or "a man, a plan, a canal, panama". 
@@ -89,7 +90,8 @@ words_filtered |>
   labs(
     x = 'Even or Odd?',
     y = '# of Words',
-    title = 'Lengths of English Words'
+    title = 'Lengths of English Words',
+    alt = 'Simple bar chart showing how many English words are an odd or even length. Very slightly more are even.'
   )
 ```
 I tend to think of a syllable as a pair of a consonant sound and a vowel sound, and there's a slight amount more of even-length words than odd in English, so I'm a bit surprised to see such a preference for odd-length ones out of the palindromes.
@@ -126,7 +128,8 @@ letters_long |>
   labs(
     x = 'Letter',
     y = 'Frequency (Percentage of Overall Set)',
-    title = 'Starting Letters of Anti-Palindromes'
+    title = 'Starting Letters of Anti-Palindromes',
+    alt = 'Bar chart showing the frequency of starting letters for anti-palindromes, as well as the English language as a whole, ordered alphabetically. Highest for English are S, P, C, A, U. Highest for anti-palindromes are T, K, M, G, B, P.'
   )
 
 ```
