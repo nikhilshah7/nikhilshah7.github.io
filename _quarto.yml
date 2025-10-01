@@ -14,13 +14,13 @@ website:
       - text: Photography
         menu:
         - text: Milky Way
-          href: milkyway.qmd
+          href: milkyway.html
         - text: Wildlife
-          href: wildlife.qmd
+          href: wildlife.html
       - text: Data Science
         menu:
         - text: Riverside Warehouses
-          url: https://radicalresearch.shinyapps.io/Socioeconomic/
+          href: https://radicalresearch.shinyapps.io/Socioeconomic/
         - text: IQAir
           href: https://github.com/nikhilshah7/RRC_IQAir
       - text: Articles
@@ -37,6 +37,8 @@ format:
     css: styles.css
     toc: true
     page-layout: full
+    output-dir: docs
+    prefer-html: true
 
 editor: source
 
