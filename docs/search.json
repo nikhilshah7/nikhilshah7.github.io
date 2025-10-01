@@ -18,7 +18,7 @@
     "href": "index.html",
     "title": "Nikhil Shah",
     "section": "",
-    "text": "My name is Nikhil Shah and I’m an upcoming senior at Pitzer College majoring in Environmental Science and Policy, with a minor in Data Science. This website currently contains a collection of data science mini-projects, and will soon be updated to include larger projects and other content."
+    "text": "My name is Nikhil Shah and I’m a senior at Pitzer College studying environmental policy and data science. This website currently contains highlights of my professional, personal, and academic work."
   },
   {
     "objectID": "project5.html",
@@ -264,5 +264,103 @@
     "title": "Biased Hiring",
     "section": "References",
     "text": "References\n\nDastin, Jeffrey (2018). “Amazon scraps secret AI recruiting tool that showed bias against women.” Reuters.\nGoodman, Rachel (2018). “Why Amazon’s Automated Hiring Tool Discriminated Against Women.” ACLU."
+  },
+  {
+    "objectID": "collateplaylist.html",
+    "href": "collateplaylist.html",
+    "title": "Collate YouTube Playlists",
+    "section": "",
+    "text": "Use HTML scraping to assemble data\nSort data as desired\nExport to spreadsheet\n\n\n\n\n\nAdd templating for use with other playlists\nGenerate an actual usable playlist\n\n\n\n\n\nCreate an interface\nMake it auto-update with new additions to the component playlists, somehow?\n\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(rvest)\n\n\nAttaching package: 'rvest'\n\nThe following object is masked from 'package:readr':\n\n    guess_encoding\n\nlibrary(purrr)\n\n\nplaylist &lt;- read_html('https://www.youtube.com/playlist?list=PLxAyA97FNoKLNf-CBjE11sfywUol5ODAp')\n\n\nplaylist |&gt;\n  html_elements('a.yt-simple-endpoint.style-scope.ytd-playlist-video-renderer') |&gt;\n  html_attr('[href]')\n\ncharacter(0)"
+  },
+  {
+    "objectID": "collateplaylist.html#to-do",
+    "href": "collateplaylist.html#to-do",
+    "title": "Collate YouTube Playlists",
+    "section": "",
+    "text": "Use HTML scraping to assemble data\nSort data as desired\nExport to spreadsheet\n\n\n\n\n\nAdd templating for use with other playlists\nGenerate an actual usable playlist\n\n\n\n\n\nCreate an interface\nMake it auto-update with new additions to the component playlists, somehow?\n\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(rvest)\n\n\nAttaching package: 'rvest'\n\nThe following object is masked from 'package:readr':\n\n    guess_encoding\n\nlibrary(purrr)\n\n\nplaylist &lt;- read_html('https://www.youtube.com/playlist?list=PLxAyA97FNoKLNf-CBjE11sfywUol5ODAp')\n\n\nplaylist |&gt;\n  html_elements('a.yt-simple-endpoint.style-scope.ytd-playlist-video-renderer') |&gt;\n  html_attr('[href]')\n\ncharacter(0)"
+  },
+  {
+    "objectID": "water.html",
+    "href": "water.html",
+    "title": "water",
+    "section": "",
+    "text": "1 Li-ion battery: 4,400 L 1 American household for a day: 1,500 L (EPA) 1 kg of rice: 2,500 L\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\nwater &lt;- data.frame(\n  'Sink' = c('Average American household in 1 day', 'Growing 1 kg of rice', '1 electric car battery'),\n  'Liters' = c(1500, 2500, 4400)\n  )\n\n\nwater |&gt;\n  ggplot(aes(x = Sink, y = Liters)) +\n  geom_bar(stat = 'identity', fill = '#7474b0') +\n  geom_text(aes(label = Liters), vjust = -0.5) +\n  labs(\n    x = '',\n    #y = '',\n    title = 'Fresh water consumed by various notable sources, liters (L)',\n    caption = 'Source: Baspineiro et al. (2020), Castelvecchi (2021), EPA (2017), Bouman (2009).'\n  ) +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\nyear &lt;- 2022:2025\ntonnes &lt;- c(724000, 920000, 1129000, 1404000)\n\nproj_year &lt;- 2026:2030\nproj_tonnes &lt;- 1404000 * 1.23 ^ (1:length(proj_year))\n\ndf &lt;- data.frame(\n  year = c(year, proj_year),\n  tonnes = c(tonnes, proj_tonnes),\n  type = c(rep(\"Actual\", length(year)), rep(\"Projected\", length(proj_year)))\n)\n\nggplot(df, aes(x = factor(year), y = tonnes, fill = type)) +\n  geom_bar(stat = \"identity\") +\n  scale_fill_manual(values = c(\"Actual\" = \"#7474b0\", \"Projected\" = \"#74b074\")) +\n  labs(\n    x = \"Year\",\n    y = \"Tonnes\",\n    title = \"Lithium Production: Actual vs Projected\"\n  ) +\n  theme_minimal(base_size = 14)\n\n\n\n\n\n\n\nyear &lt;- 2022:2025\ntonnes &lt;- c(724, 920, 1129, 1404)\n\n# Projection\ngrowth &lt;- 1.23\nproj_year &lt;- 2026:2030\nproj_tonnes &lt;- 1404 * growth ^ (1:length(proj_year))\n\n# Combine\nlithium_df &lt;- data.frame(\n  year = c(year, proj_year),\n  tonnes = c(tonnes, proj_tonnes),\n  type = c(rep(\"Actual\", length(year)), rep(\"Projected\", length(proj_year)))\n)\n\n# Plot\nggplot(lithium_df, aes(x = factor(year), y = tonnes, fill = type)) +\n  geom_bar(stat = \"identity\") +\n  scale_fill_manual(values = c(\"Actual\" = \"#7474b0\", \"Projected\" = \"#74b074\")) +\n  labs(\n    x = \"Year\",\n    y = \"Thousands of Tonnes (1,000 T)\",\n    title = \"Global Lithium Demand, Extrapolation from Cochilco Forecasting\",\n    fill = '',\n    caption = 'Source: Cochilco (2023), Reuters (2020).'\n  ) +\n  theme_minimal()"
+  },
+  {
+    "objectID": "milkyway.html",
+    "href": "milkyway.html",
+    "title": "Milky Way Photography",
+    "section": "",
+    "text": "Grand View\n\n\n\n\n\n\n\nMesa Arch\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBalanced Rock\n\n\n\n\n\n\n\nBroken Arch"
+  },
+  {
+    "objectID": "milkyway.html#utah-may-2022",
+    "href": "milkyway.html#utah-may-2022",
+    "title": "Milky Way Photography",
+    "section": "",
+    "text": "Grand View\n\n\n\n\n\n\n\nMesa Arch\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBalanced Rock\n\n\n\n\n\n\n\nBroken Arch"
+  },
+  {
+    "objectID": "milkyway.html#alabama-hills-california-march-2024",
+    "href": "milkyway.html#alabama-hills-california-march-2024",
+    "title": "Milky Way Photography",
+    "section": "Alabama Hills, California, March 2024",
+    "text": "Alabama Hills, California, March 2024\n\n\n\n\n\n\n\n\n\nEye of Alabama Hills Arch\n\n\n\n\n\n\n\nBowling Ball and Pins"
+  },
+  {
+    "objectID": "milkyway.html#joshua-tree-national-park-california-september-2025",
+    "href": "milkyway.html#joshua-tree-national-park-california-september-2025",
+    "title": "Milky Way Photography",
+    "section": "Joshua Tree National Park, California, September 2025",
+    "text": "Joshua Tree National Park, California, September 2025\n\n\n\n\n\n\n\n\n\nMojave Yucca\n\n\n\n\n\n\n\nJoshua Trees"
+  },
+  {
+    "objectID": "wildlife.html",
+    "href": "wildlife.html",
+    "title": "Wildlife Photography",
+    "section": "",
+    "text": "Lion (Panthera leo)\n\n\n\n\n\n\n\nLion (Panthera leo)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLion (Panthera leo)\n\n\n\n\n\n\n\nLion (Panthera leo)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLion (Panthera leo)\n\n\n\n\n\n\n\nSpotted Hyena (Crocuta crocuta)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWoodland Kingfisher (Halcyon senegalensis)\n\n\n\n\n\n\n\nCommon Eland (Tragelaphus oryx)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLilac-breasted Roller (Coracias caudatus)\n\n\n\n\n\n\n\nLittle Bee-eater (Merops pusillus)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNorthern Giraffe (Giraffa camelopardalis)\n\n\n\n\n\n\n\nAfrican buffalo (Syncerus caffer)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCheetah (Acinonyx jubatus)\n\n\n\n\n\n\n\nServal (Leptailurus serval)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSavanna Elephant (Loxodonta africana)\n\n\n\n\n\n\n\nPlains Zebra (Equus quagga\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOlive Baboon (Papio anubis)\n\n\n\n\n\n\n\nBanded Mongoose (Mungos mungo)"
+  },
+  {
+    "objectID": "milkyway.html#info",
+    "href": "milkyway.html#info",
+    "title": "Milky Way Photography",
+    "section": "Info",
+    "text": "Info\n\nEquipment\n\nSony A7IV\nSony 14mm f/1.8 GM\niOptron SkyTracker Pro\n\n\n\nSettings\n\nRAW\n14mm\nf/1.8\n150-210s (Sky)\n180-260s (FG)\nISO 100-400\n\n\n\nProcessing\n\nAdobe Photoshop\nForeground + sky composite\nStar reduction\nColor + lighting rebalancing"
+  },
+  {
+    "objectID": "wildlife.html#maasai-mara-national-reserve-kenya-2023",
+    "href": "wildlife.html#maasai-mara-national-reserve-kenya-2023",
+    "title": "Wildlife Photography",
+    "section": "",
+    "text": "Lion (Panthera leo)\n\n\n\n\n\n\n\nLion (Panthera leo)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLion (Panthera leo)\n\n\n\n\n\n\n\nLion (Panthera leo)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLion (Panthera leo)\n\n\n\n\n\n\n\nSpotted Hyena (Crocuta crocuta)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWoodland Kingfisher (Halcyon senegalensis)\n\n\n\n\n\n\n\nCommon Eland (Tragelaphus oryx)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLilac-breasted Roller (Coracias caudatus)\n\n\n\n\n\n\n\nLittle Bee-eater (Merops pusillus)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNorthern Giraffe (Giraffa camelopardalis)\n\n\n\n\n\n\n\nAfrican buffalo (Syncerus caffer)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCheetah (Acinonyx jubatus)\n\n\n\n\n\n\n\nServal (Leptailurus serval)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSavanna Elephant (Loxodonta africana)\n\n\n\n\n\n\n\nPlains Zebra (Equus quagga\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOlive Baboon (Papio anubis)\n\n\n\n\n\n\n\nBanded Mongoose (Mungos mungo)"
+  },
+  {
+    "objectID": "wildlife.html#loisaba-conservancy-kenya-2023",
+    "href": "wildlife.html#loisaba-conservancy-kenya-2023",
+    "title": "Wildlife Photography",
+    "section": "Loisaba Conservancy, Kenya, 2023",
+    "text": "Loisaba Conservancy, Kenya, 2023\n\n\n\n\n\n\n\n\n\nVon Der Decken’s Hornbill (Tockus deckeni)\n\n\n\n\n\n\n\nLion (Panthera leo)"
+  },
+  {
+    "objectID": "wildlife.html#virunga-mountains-rwanda-2023",
+    "href": "wildlife.html#virunga-mountains-rwanda-2023",
+    "title": "Wildlife Photography",
+    "section": "Virunga Mountains, Rwanda, 2023",
+    "text": "Virunga Mountains, Rwanda, 2023\n\n\n\n\n\n\n\n\n\nMountain Gorilla (Gorilla berengei berengei)\n\n\n\n\n\n\n\nMountain Gorilla (Gorilla berengei berengei)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlue Monkey (Cercopithecus mitis)\n\n\n\n\n\n\n\nBlue Monkey (Cercopithecus mitis)"
+  },
+  {
+    "objectID": "wildlife.html#eastern-egg-rock-new-harbor-me-2025",
+    "href": "wildlife.html#eastern-egg-rock-new-harbor-me-2025",
+    "title": "Wildlife Photography",
+    "section": "Eastern Egg Rock, New Harbor, ME, 2025",
+    "text": "Eastern Egg Rock, New Harbor, ME, 2025\n\n\n\n\n\n\n\n\n\nAtlantic Puffin (Fratercula arctica)\n\n\n\n\n\n\n\nAtlantic Puffin (Fratercula arctica)"
+  },
+  {
+    "objectID": "fsi/water.html",
+    "href": "fsi/water.html",
+    "title": "water",
+    "section": "",
+    "text": "1 Li-ion battery: 4,400 L 1 American household for a day: 1,500 L (EPA) 1 kg of rice: 2,500 L\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\nwater &lt;- data.frame(\n  'Sink' = c('Average American household in 1 day', 'Growing 1 kg of rice', '1 electric car battery'),\n  'Liters' = c(1500, 2500, 4400)\n  )\n\n\nwater |&gt;\n  ggplot(aes(x = Sink, y = Liters)) +\n  geom_bar(stat = 'identity', fill = '#7474b0') +\n  geom_text(aes(label = Liters), vjust = -0.5) +\n  labs(\n    x = '',\n    #y = '',\n    title = 'Fresh water consumed by various notable sources, liters (L)',\n    caption = 'Source: Baspineiro et al. (2020), Castelvecchi (2021), EPA (2017), Bouman (2009).'\n  ) +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\nyear &lt;- 2022:2025\ntonnes &lt;- c(724000, 920000, 1129000, 1404000)\n\nproj_year &lt;- 2026:2030\nproj_tonnes &lt;- 1404000 * 1.23 ^ (1:length(proj_year))\n\ndf &lt;- data.frame(\n  year = c(year, proj_year),\n  tonnes = c(tonnes, proj_tonnes),\n  type = c(rep(\"Actual\", length(year)), rep(\"Projected\", length(proj_year)))\n)\n\nggplot(df, aes(x = factor(year), y = tonnes, fill = type)) +\n  geom_bar(stat = \"identity\") +\n  scale_fill_manual(values = c(\"Actual\" = \"#7474b0\", \"Projected\" = \"#74b074\")) +\n  labs(\n    x = \"Year\",\n    y = \"Tonnes\",\n    title = \"Lithium Production: Actual vs Projected\"\n  ) +\n  theme_minimal(base_size = 14)\n\n\n\n\n\n\n\nyear &lt;- 2022:2025\ntonnes &lt;- c(724, 920, 1129, 1404)\n\n# Projection\ngrowth &lt;- 1.23\nproj_year &lt;- 2026:2030\nproj_tonnes &lt;- 1404 * growth ^ (1:length(proj_year))\n\n# Combine\nlithium_df &lt;- data.frame(\n  year = c(year, proj_year),\n  tonnes = c(tonnes, proj_tonnes),\n  type = c(rep(\"Actual\", length(year)), rep(\"Projected\", length(proj_year)))\n)\n\n# Plot\nggplot(lithium_df, aes(x = factor(year), y = tonnes, fill = type)) +\n  geom_bar(stat = \"identity\") +\n  scale_fill_manual(values = c(\"Actual\" = \"#7474b0\", \"Projected\" = \"#74b074\")) +\n  labs(\n    x = \"Year\",\n    y = \"Thousands of Tonnes (1,000 T)\",\n    title = \"Global Lithium Demand, Extrapolation from Cochilco Forecasting\",\n    fill = '',\n    caption = 'Source: Cochilco (2023), Reuters (2020).'\n  ) +\n  theme_minimal()"
   }
 ]

@@ -11,24 +11,22 @@ website:
     left:
       - text: Home
         href: index.qmd
-      - text: Data Sci Projects
+      - text: Photography
         menu:
-        - text: Data Viz (Lichess.org)
-          href: dataviz1.qmd
-        - text: Data Viz (National Park Species)
-          href: dataviz2.qmd
-        - text: Data Viz (Species Interactive App)
-          href: dataviz3.qmd
-        - text: Text Analysis (Palindromes)
-          href: textanalysis.qmd
-        - text: Simulation (Reverse 3-0s)
-          href: simulation.qmd
-        - text: Data Science Ethics (Biased Hiring Algorithm)
-          href: ethics.qmd
-        - text: SQL (Hungry Cop Effect)
-          href: sql.qmd
-      - text: Presentation
-        href: presentation.qmd
+        - text: Milky Way
+          href: milkyway.qmd
+        - text: Wildlife
+          href: wildlife.qmd
+      - text: Data Science
+        menu:
+        - text: Riverside Warehouses
+          url: https://radicalresearch.shinyapps.io/Socioeconomic/
+        - text: IQAir
+          href: https://github.com/nikhilshah7/RRC_IQAir
+      - text: Articles
+        menu:
+        - text: 'BACUTI: Climate Disclosures (TBA)'
+        - text: 'FSI: Lithium Extraction in South America (TBA)'
           
 
 format:

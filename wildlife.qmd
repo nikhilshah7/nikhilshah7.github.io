@@ -1,0 +1,92 @@
+---
+title: "Wildlife Photography"
+---
+
+## Maasai Mara National Reserve, Kenya, 2023
+
+::: {layout-ncol=2}
+![Lion (Panthera leo)](wl/lions1.jpg)
+
+![Lion (Panthera leo)](wl/lions2.jpg)
+:::
+
+::: {layout-ncol=2}
+![Lion (Panthera leo)](wl/lions3.jpg)
+
+![Lion (Panthera leo)](wl/lions4.jpg)
+:::
+
+::: {layout-ncol=2}
+![Lion (Panthera leo)](wl/lions5.jpg)
+
+![Spotted Hyena (Crocuta crocuta)](wl/hyena.jpg)
+:::
+
+::: {layout-ncol=2}
+![Woodland Kingfisher (Halcyon senegalensis)](wl/kingfisher.jpg)
+
+![Common Eland (Tragelaphus oryx)](wl/eland.jpg)
+:::
+
+::: {layout-ncol=2}
+![Lilac-breasted Roller (Coracias caudatus)](wl/roller.jpg)
+
+![Little Bee-eater (Merops pusillus)](wl/beeeater.jpg)
+:::
+
+::: {layout-ncol=2}
+![Northern Giraffe (Giraffa camelopardalis)](wl/giraffe.jpg)
+
+![African buffalo (Syncerus caffer)](wl/buffalo.jpg)
+:::
+
+::: {layout-ncol=2}
+![Cheetah (Acinonyx jubatus)](wl/cheetah.jpg)
+
+![Serval (Leptailurus serval)](wl/serval.jpg)
+:::
+
+::: {layout-ncol=2}
+![Savanna Elephant (Loxodonta africana)](wl/elephant.jpg)
+
+![Plains Zebra (Equus quagga](wl/zebras.jpg)
+:::
+
+::: {layout-ncol=2}
+![Olive Baboon (Papio anubis)](wl/baboons.jpg)
+
+![Banded Mongoose (Mungos mungo)](wl/mongoose.jpg)
+:::
+
+
+## Loisaba Conservancy, Kenya, 2023
+
+::: {layout-ncol=2}
+![Von Der Decken's Hornbill (Tockus deckeni)](wl/hornbill.jpg)
+
+![Lion (Panthera leo)](wl/lions6.jpg)
+:::
+
+
+## Virunga Mountains, Rwanda, 2023
+
+::: {layout-ncol=2}
+![Mountain Gorilla (Gorilla berengei berengei)](wl/gorillas1.jpg)
+
+![Mountain Gorilla (Gorilla berengei berengei)](wl/gorillas2.jpg)
+:::
+
+::: {layout-ncol=2}
+![Blue Monkey (Cercopithecus mitis)](wl/monkeys1.jpg)
+
+![Blue Monkey (Cercopithecus mitis)](wl/monkeys2.jpg)
+:::
+
+
+## Eastern Egg Rock, New Harbor, ME, 2025
+
+::: {layout-ncol=2}
+![Atlantic Puffin (Fratercula arctica)](wl/puffins.jpg)
+
+![Atlantic Puffin (Fratercula arctica)](wl/puffin.jpg)
+:::

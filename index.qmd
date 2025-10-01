@@ -16,4 +16,4 @@ about:
     href: https://github.com/nikhilshah7/nikhilshah7.github.io
 ---
 
-My name is Nikhil Shah and I'm an upcoming senior at Pitzer College majoring in Environmental Science and Policy, with a minor in Data Science. This website currently contains a collection of data science mini-projects, and will soon be updated to include larger projects and other content.
+My name is Nikhil Shah and I'm a senior at Pitzer College studying environmental policy and data science. This website currently contains highlights of my professional, personal, and academic work.

@@ -1,0 +1,63 @@
+---
+title: "Milky Way Photography"
+author: Nikhil Shah
+format: html
+---
+
+
+
+## Utah, May 2022
+
+### Canyonlands National Park 
+
+::: {layout-ncol=2}
+![Grand View](mw/Grand View.png)
+
+![Mesa Arch](mw/Mesa Arch.png)
+:::
+
+### Arches National Park
+
+::: {layout-ncol=2}
+![Balanced Rock](mw/Balanced Rock.png)
+
+![Broken Arch](mw/Broken Arch.png)
+:::
+
+## Alabama Hills, California, March 2024
+
+::: {layout-ncol=2}
+![Eye of Alabama Hills Arch](mw/Eye of Alabama Hills Arch.png)
+
+![Bowling Ball and Pins](mw/Bowling Ball and Pins.png)
+:::
+
+## Joshua Tree National Park, California, September 2025
+
+::: {layout-ncol=2}
+![Mojave Yucca](mw/Mojave Yucca.png)
+
+![Joshua Trees](mw/Joshua Trees.png)
+:::
+
+
+## Info
+
+### Equipment
+- Sony A7IV
+- Sony 14mm f/1.8 GM
+- iOptron SkyTracker Pro
+
+### Settings
+- RAW
+- 14mm
+- f/1.8
+- 150-210s (Sky)
+- 180-260s (FG)
+- ISO 100-400
+
+### Processing
+- Adobe Photoshop
+- Foreground + sky composite
+- Star reduction
+- Color + lighting rebalancing
